@@ -1,5 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { BuildMotionLoggingModule } from 'buildmotion-logging';
 import { BuildMotionCoreModule } from 'buildmotion-core';
@@ -11,7 +14,11 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     BuildMotionCoreModule,
     BuildMotionFoundationModule,
     BuildMotionLoggingModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
+    RouterModule
   ],
   declarations: [SubscribeComponent],
   exports: [

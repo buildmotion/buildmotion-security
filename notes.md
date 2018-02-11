@@ -985,6 +985,12 @@ The template for the subscription component is simple. It is a form with 2 input
 
 Now that we have the template define. We'll need to put the template inline in the component definition. Update the ` subscriber.component.ts ` to use the back ticks for the HTML template - make sure to change the ` templateUrl ` to ` template ` since we are no longer referencing the actual HTML file. 
 
+Additionally, we need to remove the CSS configuration. 
+
+```
+styleUrls: ['./subscribe.component.css']
+```
+
 ```javascript
 import { Component, OnInit } from '@angular/core';
 
@@ -1012,8 +1018,7 @@ import { Component, OnInit } from '@angular/core';
       <i class="fa fa-check ml-1"></i>
     </button>
   </form>
-  <!-- SUBSCRIBE SIGN-UP FORM -->`,
-  styleUrls: ['./subscribe.component.css']
+  <!-- SUBSCRIBE SIGN-UP FORM -->`
 })
 export class SubscribeComponent implements OnInit {
 
