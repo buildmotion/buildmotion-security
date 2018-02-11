@@ -1,0 +1,19 @@
+{
+    "project": {
+        "version": "1.0.0",
+        "name": "buildmotion-security"
+    },
+    "apps": [
+        {
+            "tsconfig": "tsconfig.json",
+            "mobile": false,
+            "root": "src",
+            "prefix": "app"
+        }
+    ],
+    "defaults": {
+        "styleExt": "css",
+        "prefixInterfaces": false,
+        "lazyRoutePrefix": "+"
+    }
+}
