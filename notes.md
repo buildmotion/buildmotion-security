@@ -116,27 +116,25 @@ The current ` package.json ` file does not have any ` devDependencies ` or ` Dep
 Run the following in the terminal to add the ` devDependencies ` to the project. Note: you might have to be running Visual Studio Code in Administrator.
 
 ```javascript
-npm install --save-dev rxjs@5.5.6
-npm install --save-dev @angular/cli@latest
-npm install --save-dev @angular/common@latest
-npm install --save-dev @angular/compiler@latest
-npm install --save-dev @angular/core@latest
-npm install --save-dev @angular/forms@latest
-npm install --save-dev @angular/http@latest
-npm install --save-dev @angular/router@latest
-npm install --save-dev @angular/compiler-cli@latest
-npm install --save-dev typescript@<2.5.0
+npm install -S rxjs@5.5.6
+npm install -S @angular/common@latest
+npm install -S @angular/core@latest
+npm install -S @angular/forms@latest
+npm install -S @angular/http@latest
+npm install -S @angular/router@latest
+npm install -D @angular/cli@latest
+npm install -D @angular/compiler-cli@latest
+npm install -D @angular/compiler@latest
+npm install -D typescript@<2.5.0
 ```
 
 The npm install ' --save-dev ` will update the ` devDependencies ` section in the ` package.json ` file. 
 
 ```javascript
   "devDependencies": {
-    "@angular/cli": "^1.6.8",
-    "@angular/common": "^5.2.4",
+   "@angular/cli": "^1.6.8",
     "@angular/compiler": "^5.2.4",
     "@angular/compiler-cli": "^5.2.4",
-    "@angular/core": "^5.2.4",
     "typescript": "^2.5.0"
   }
 ```

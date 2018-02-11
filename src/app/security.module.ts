@@ -8,6 +8,8 @@ import { BuildMotionLoggingModule } from 'buildmotion-logging';
 import { BuildMotionCoreModule } from 'buildmotion-core';
 import { BuildMotionFoundationModule } from 'buildmotion-foundation';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+
+// INTERNAL INJECTABLE SERVICES
 import { SubscriberBusinessProviderService } from './business/subscriber-business-provider.service';
 import { SubscriberApiService } from './business/subscriber-api.service';
 
