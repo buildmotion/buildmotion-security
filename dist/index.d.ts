@@ -1,5 +1,6 @@
 export * from './security.module';
 export * from './security.service';
+export * from './subscribe/subscribe.component';
 export * from './models/confirmation-token.model';
 export * from './models/credentials.model';
 export * from './models/oauth-response.model';

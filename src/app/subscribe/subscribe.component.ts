@@ -36,8 +36,7 @@ import { ServiceResponse, ErrorResponse } from 'buildmotion-foundation';
       <i class="fa fa-check ml-1"></i>
     </button>
   </form>
-  <!-- SUBSCRIBE SIGN-UP FORM -->`,
-  styleUrls: ['./subscribe.component.css']
+  <!-- SUBSCRIBE SIGN-UP FORM -->`
 })
 export class SubscribeComponent extends ComponentBase implements OnInit {
   @Output() subscribe = new EventEmitter<ServiceResponse>();

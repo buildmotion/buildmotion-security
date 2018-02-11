@@ -4,6 +4,7 @@
  */
 export { SecurityModule } from './security.module';
 export { SecurityService } from './security.service';
+export { SubscribeComponent } from './subscribe/subscribe.component';
 export { ConfirmationToken } from './models/confirmation-token.model';
 export { Credentials } from './models/credentials.model';
 export { OAuthResponse } from './models/oauth-response.model';
