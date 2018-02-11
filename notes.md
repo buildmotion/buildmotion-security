@@ -387,10 +387,17 @@ By convention, the Angular CLI will create a folder for the module (thinking tha
 ```javascript
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
+    RouterModule
   ],
   declarations: []
 })
@@ -558,6 +565,9 @@ We can start to use them with the ` SecurityService ` that is already part of th
 ```javascript
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { BuildMotionLoggingModule } from 'buildmotion-logging';
 import { BuildMotionCoreModule } from 'buildmotion-core';
@@ -568,7 +578,11 @@ import { BuildMotionFoundationModule } from 'buildmotion-foundation';
     BuildMotionCoreModule,
     BuildMotionFoundationModule,
     BuildMotionLoggingModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
+    RouterModule
   ],
   declarations: []
 })
@@ -924,6 +938,9 @@ The ` SecurityModule ` is updated with the ` SubscribeComponent ` import, declar
 ```javascript
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { BuildMotionLoggingModule } from 'buildmotion-logging';
 import { BuildMotionCoreModule } from 'buildmotion-core';
@@ -935,7 +952,11 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     BuildMotionCoreModule,
     BuildMotionFoundationModule,
     BuildMotionLoggingModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
+    RouterModule
   ],
   declarations: [SubscribeComponent],
   exports: [
