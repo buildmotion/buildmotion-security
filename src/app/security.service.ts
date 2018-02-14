@@ -14,6 +14,9 @@ export class SecurityService extends ServiceBase {
     private businessProvider: SubscriberBusinessProviderService
   ) {
     super(loggingService)
+    this.serviceName = '';
+    this.businessProvider.serviceContext = this.serviceContext;
+    this.businessProvider.loggingService = this.loggingService;
    }
 
    registerSubscriber(subscriber: Subscriber): Observable<ServiceResponse> {

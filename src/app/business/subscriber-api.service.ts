@@ -20,9 +20,10 @@ import { HttpBaseService } from 'buildmotion-foundation';
 import { Subscriber } from './../models/subscriber.model';
 import { SubscriberItem } from './../models/subscriber-item.model';
 import { ServiceResponse } from 'buildmotion-foundation';
+import { ServiceContext } from 'angular-rules-engine';
 
 @Injectable()
-export class SubscriberApiService {
+export class SubscriberApiService extends HttpBaseService {
   url: string = '/api/security';
   data: Observable<Response>;
   serviceName: string;
@@ -33,7 +34,7 @@ export class SubscriberApiService {
     // @Inject(ServiceContext) serviceContext: ServiceContext,
     public loggingService: LoggingService
   ) {
-    // super(loggingService);
+    super(http, loggingService);
     this.serviceName = 'SecurityHttpService';
     // this.serviceContext = serviceContext;
   }
