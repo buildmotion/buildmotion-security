@@ -9,7 +9,7 @@ import { HttpBaseService } from 'buildmotion-foundation';
 import { Subscriber } from './../models/subscriber.model';
 import { SubscriberItem } from './../models/subscriber-item.model';
 import { ServiceResponse } from 'buildmotion-foundation';
-export declare class SubscriberApiService {
+export declare class SubscriberApiService extends HttpBaseService {
     http: Http;
     httpService: HttpBaseService;
     loggingService: LoggingService;

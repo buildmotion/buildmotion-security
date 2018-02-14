@@ -1,3 +1,13 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
@@ -12,15 +22,17 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { LoggingService, Severity } from 'buildmotion-logging';
 import { HttpBaseService } from 'buildmotion-foundation';
 import { ServiceResponse } from 'buildmotion-foundation';
-var SubscriberApiService = (function () {
+var SubscriberApiService = (function (_super) {
+    __extends(SubscriberApiService, _super);
     function SubscriberApiService(http, httpService, loggingService) {
-        this.http = http;
-        this.httpService = httpService;
-        this.loggingService = loggingService;
-        this.url = '/api/security';
-        // super(loggingService);
-        this.serviceName = 'SecurityHttpService';
+        var _this = _super.call(this, http, loggingService) || this;
+        _this.http = http;
+        _this.httpService = httpService;
+        _this.loggingService = loggingService;
+        _this.url = '/api/security';
+        _this.serviceName = 'SecurityHttpService';
         // this.serviceContext = serviceContext;
+        return _this;
     }
     /**
      * @param {?} subscriber
@@ -82,7 +94,7 @@ var SubscriberApiService = (function () {
         { type: LoggingService, },
     ]; };
     return SubscriberApiService;
-}());
+}(HttpBaseService));
 export { SubscriberApiService };
 function SubscriberApiService_tsickle_Closure_declarations() {
     /** @type {!Array<{type: !Function, args: (undefined|!Array<?>)}>} */

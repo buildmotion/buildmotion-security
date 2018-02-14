@@ -21,6 +21,9 @@ var SecurityService = (function (_super) {
     function SecurityService(loggingService, businessProvider) {
         var _this = _super.call(this, loggingService) || this;
         _this.businessProvider = businessProvider;
+        _this.serviceName = '';
+        _this.businessProvider.serviceContext = _this.serviceContext;
+        _this.businessProvider.loggingService = _this.loggingService;
         return _this;
     }
     /**
