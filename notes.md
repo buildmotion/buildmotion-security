@@ -1194,6 +1194,8 @@ The ` SecurityService ` will use the business provider to execute the business l
 * import the ` SubscriberBusinessProviderService ` class
 * inject the ` SubscriberBusinessProviderService ` into the constructor of the ` SecurityService`.
   * use ` private ` access modifier to limit access to this service as a private member.
+  * set the ` serviceContext ` of the business provider in the constructor.
+  * set the ` loggingService ` of the business provider in the constructor.
 * create a ` registerSubscriber(subscriber: Subscriber) ` method. The return type is an Observable<ServiceResponse>
 
 ```javascript
@@ -1213,6 +1215,9 @@ export class SecurityService extends ServiceBase {
     private businessProvider: SubscriberBusinessProviderService
   ) {
     super(loggingService)
+     this.serviceName = 'SecurityService';
+     this.businessProvider.serviceContext = this.serviceContext;
+     this.businessProvider.loggingService = this.loggingService;
    }
 
    registerSubscriber(subscriber: Subscriber): Observable<ServiceResponse> {
