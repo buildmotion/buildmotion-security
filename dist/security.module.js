@@ -31,6 +31,7 @@ var BuildMotionSecurityModule = (function () {
                     ],
                     declarations: [SubscribeComponent, ConfirmSubscriptionComponent],
                     exports: [
+                        ConfirmSubscriptionComponent,
                         SubscribeComponent
                     ],
                     providers: [
