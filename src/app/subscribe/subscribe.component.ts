@@ -38,7 +38,7 @@ import { ServiceResponse, ErrorResponse } from 'buildmotion-foundation';
   </form>
   <!-- SUBSCRIBE SIGN-UP FORM -->`
 })
-export class SubscribeComponent extends ComponentBase implements OnInit {
+export class SubscribeComponent extends ComponentBase implements OnInit { 
   @Output() subscribe = new EventEmitter<ServiceResponse>();
   _form: FormGroup;
   subscriber: Subscriber;

@@ -13,6 +13,7 @@ import { BuildMotionFoundationModule } from 'buildmotion-foundation';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { SubscriberBusinessProviderService } from './business/subscriber-business-provider.service';
 import { SubscriberApiService } from './business/subscriber-api.service';
+import { ConfirmSubscriptionComponent } from './confirm-subscription/confirm-subscription.component';
 var BuildMotionSecurityModule = (function () {
     function BuildMotionSecurityModule() {
     }
@@ -28,7 +29,7 @@ var BuildMotionSecurityModule = (function () {
                         HttpModule,
                         RouterModule
                     ],
-                    declarations: [SubscribeComponent],
+                    declarations: [SubscribeComponent, ConfirmSubscriptionComponent],
                     exports: [
                         SubscribeComponent
                     ],

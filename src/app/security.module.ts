@@ -12,6 +12,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 // INTERNAL INJECTABLE SERVICES
 import { SubscriberBusinessProviderService } from './business/subscriber-business-provider.service';
 import { SubscriberApiService } from './business/subscriber-api.service';
+import { ConfirmSubscriptionComponent } from './confirm-subscription/confirm-subscription.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import { SubscriberApiService } from './business/subscriber-api.service';
     HttpModule,
     RouterModule
   ],
-  declarations: [SubscribeComponent],
+  declarations: [SubscribeComponent, ConfirmSubscriptionComponent],
   exports: [
     SubscribeComponent
   ],

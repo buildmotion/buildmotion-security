@@ -1,0 +1,20 @@
+<buildmotion-alert [alertNotification]="alertNotification" [hasMessage]="alertNotification.showAlert"></buildmotion-alert>
+<form [formGroup]="_form" (ngSubmit)="submitForm()">
+  <div class="md-form">
+    <i class="fa fa-envelope prefix"></i>
+    <input type="text" id="UserName" class="form-control" formControlName="UserName">
+    <label for="UserName">Your email address.</label>
+  </div>
+
+  <div class="md-form">
+    <i class="fa fa-person prefix"></i>
+    <input type="text" id="ConfirmationToken" class="form-control" formControlName="ConfirmationToken">
+    <label for="ConfirmationToken">Enter token from email.</label>
+  </div>
+
+  <div class="text-xs-center">
+    <button class="btn btn-lime" type="submit">Confirm Account</button>
+    <!-- <p>Form: {{_form.value | json}}</p>
+    <p>Form status: {{ _form.status }}</p> -->
+  </div>
+</form>
