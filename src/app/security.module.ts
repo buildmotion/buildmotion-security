@@ -27,11 +27,12 @@ import { ConfirmSubscriptionComponent } from './confirm-subscription/confirm-sub
   ],
   declarations: [SubscribeComponent, ConfirmSubscriptionComponent],
   exports: [
+    ConfirmSubscriptionComponent,
     SubscribeComponent
   ],
   providers: [
-    SubscriberApiService,
-    SubscriberBusinessProviderService
+    SubscriberApiService, //PROVIDE INTERNAL SERVICES FOR THE MODULE; SCOPED TO THIS MODULE;
+    SubscriberBusinessProviderService //PROVIDE INTERNAL SERVICES FOR THE MODULE; SCOPED TO THIS MODULE;
   ]
 })
 export class BuildMotionSecurityModule { }
