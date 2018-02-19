@@ -5,8 +5,10 @@ import { LoggingService, Severity } from 'buildmotion-logging';
 import { ServiceBase, ServiceResponse } from 'buildmotion-foundation';
 
 import { Subscriber } from './../models/subscriber.model';
+import { ConfirmSubscriberAction } from './actions/confirm-subscriber.action';
 import { RegisterSubscriberAction } from './actions/register-subscriber.action';
 import { SubscriberApiService } from './subscriber-api.service';
+import { ConfirmationToken } from '..';
 
 @Injectable()
 export class SubscriberBusinessProviderService extends ServiceBase {
@@ -22,6 +24,12 @@ export class SubscriberBusinessProviderService extends ServiceBase {
 
   registerSubscriber(subscriber: Subscriber): Observable<ServiceResponse> {
     const action = new RegisterSubscriberAction(subscriber);
+    action.Do(this);
+    return action.response;
+  }
+
+  confirmSubscriber(confirmationToken: ConfirmationToken) {
+    const action = new ConfirmSubscriberAction(confirmationToken);
     action.Do(this);
     return action.response;
   }

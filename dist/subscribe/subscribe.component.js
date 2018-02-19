@@ -18,7 +18,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { ComponentBase } from 'buildmotion-core';
 import { LoggingService, Severity } from 'buildmotion-logging';
 import { Subscriber } from './../models/subscriber.model';
-import { SecurityService } from './../security.service';
+import { BuildMotionSecurityService } from './../security.service';
 var SubscribeComponent = (function (_super) {
     __extends(SubscribeComponent, _super);
     function SubscribeComponent(securityService, loggingService, formBuilder, router) {
@@ -103,7 +103,7 @@ var SubscribeComponent = (function (_super) {
     ];
     /** @nocollapse */
     SubscribeComponent.ctorParameters = function () { return [
-        { type: SecurityService, },
+        { type: BuildMotionSecurityService, },
         { type: LoggingService, },
         { type: FormBuilder, },
         { type: Router, },

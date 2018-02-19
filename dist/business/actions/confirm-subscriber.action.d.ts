@@ -2,11 +2,11 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/throw';
 import { ServiceResponse } from 'buildmotion-foundation';
 import { SubscriberActionBase } from './subscriber-action-base.action';
-import { Subscriber } from './../../models/subscriber.model';
-export declare class RegisterSubscriberAction extends SubscriberActionBase {
-    private subscriber;
+import { ConfirmationToken } from '../..';
+export declare class ConfirmSubscriberAction extends SubscriberActionBase {
+    private confirmationToken;
     response: Observable<ServiceResponse>;
-    constructor(subscriber: Subscriber);
+    constructor(confirmationToken: ConfirmationToken);
     /**
      * Override this method from the base [Action] class to allow for rules to be added to the
      * action's [ValidationContext]. Any rules added to the [ValidationContext] here will be executed when

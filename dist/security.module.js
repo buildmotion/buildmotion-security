@@ -13,10 +13,10 @@ import { BuildMotionFoundationModule } from 'buildmotion-foundation';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { SubscriberBusinessProviderService } from './business/subscriber-business-provider.service';
 import { SubscriberApiService } from './business/subscriber-api.service';
-var SecurityModule = (function () {
-    function SecurityModule() {
+var BuildMotionSecurityModule = (function () {
+    function BuildMotionSecurityModule() {
     }
-    SecurityModule.decorators = [
+    BuildMotionSecurityModule.decorators = [
         { type: NgModule, args: [{
                     imports: [
                         BuildMotionCoreModule,
@@ -39,17 +39,17 @@ var SecurityModule = (function () {
                 },] },
     ];
     /** @nocollapse */
-    SecurityModule.ctorParameters = function () { return []; };
-    return SecurityModule;
+    BuildMotionSecurityModule.ctorParameters = function () { return []; };
+    return BuildMotionSecurityModule;
 }());
-export { SecurityModule };
-function SecurityModule_tsickle_Closure_declarations() {
+export { BuildMotionSecurityModule };
+function BuildMotionSecurityModule_tsickle_Closure_declarations() {
     /** @type {!Array<{type: !Function, args: (undefined|!Array<?>)}>} */
-    SecurityModule.decorators;
+    BuildMotionSecurityModule.decorators;
     /**
      * @nocollapse
      * @type {function(): !Array<(null|{type: ?, decorators: (undefined|!Array<{type: !Function, args: (undefined|!Array<?>)}>)})>}
      */
-    SecurityModule.ctorParameters;
+    BuildMotionSecurityModule.ctorParameters;
 }
 //# sourceMappingURL=security.module.js.map

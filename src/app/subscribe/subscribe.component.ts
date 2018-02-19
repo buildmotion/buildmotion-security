@@ -9,7 +9,7 @@ import {
 import { ComponentBase } from 'buildmotion-core';
 import { LoggingService, Severity } from 'buildmotion-logging';
 import { Subscriber } from './../models/subscriber.model';
-import { SecurityService } from './../security.service';
+import { BuildMotionSecurityService } from './../security.service';
 import { ServiceResponse, ErrorResponse } from 'buildmotion-foundation';
 
 @Component({
@@ -45,7 +45,7 @@ export class SubscribeComponent extends ComponentBase implements OnInit {
   
 
   constructor(
-    private securityService: SecurityService,
+    private securityService: BuildMotionSecurityService,
     loggingService: LoggingService,
     public formBuilder: FormBuilder,
     router: Router

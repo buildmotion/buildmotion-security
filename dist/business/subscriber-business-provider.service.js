@@ -15,6 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 import { Injectable, Inject } from '@angular/core';
 import { LoggingService, Severity } from 'buildmotion-logging';
 import { ServiceBase } from 'buildmotion-foundation';
+import { ConfirmSubscriberAction } from './actions/confirm-subscriber.action';
 import { RegisterSubscriberAction } from './actions/register-subscriber.action';
 import { SubscriberApiService } from './subscriber-api.service';
 var SubscriberBusinessProviderService = (function (_super) {
@@ -37,6 +38,19 @@ var SubscriberBusinessProviderService = (function (_super) {
      */
     function (subscriber) {
         var /** @type {?} */ action = new RegisterSubscriberAction(subscriber);
+        action.Do(this);
+        return action.response;
+    };
+    /**
+     * @param {?} confirmationToken
+     * @return {?}
+     */
+    SubscriberBusinessProviderService.prototype.confirmSubscriber = /**
+     * @param {?} confirmationToken
+     * @return {?}
+     */
+    function (confirmationToken) {
+        var /** @type {?} */ action = new ConfirmSubscriberAction(confirmationToken);
         action.Do(this);
         return action.response;
     };

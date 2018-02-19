@@ -2,8 +2,8 @@
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-export { SecurityModule } from './security.module';
-export { SecurityService } from './security.service';
+export { BuildMotionSecurityModule } from './security.module';
+export { BuildMotionSecurityService } from './security.service';
 export { SubscribeComponent } from './subscribe/subscribe.component';
 export { ConfirmationToken } from './models/confirmation-token.model';
 export { Credentials } from './models/credentials.model';

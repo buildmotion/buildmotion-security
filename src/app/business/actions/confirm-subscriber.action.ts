@@ -10,16 +10,16 @@ import { HttpBaseService, ServiceResponse, ErrorResponse } from 'buildmotion-fou
 import { Severity } from 'buildmotion-logging';
 import { SubscriberActionBase } from './subscriber-action-base.action';
 
-import { Subscriber } from './../../models/subscriber.model';
+import { ConfirmationToken } from '../..';
 
-export class RegisterSubscriberAction extends SubscriberActionBase {
+export class ConfirmSubscriberAction extends SubscriberActionBase {
 
     // response: Observable<Response>;
     response: Observable<ServiceResponse>;
- 
-    constructor(private subscriber: Subscriber) {
+
+    constructor(private confirmationToken: ConfirmationToken) {
         super();
-        this.actionName = 'CreateUserSubscriptionAction';
+        this.actionName = 'ConfirmSubscriberAction';
     }
 
     /**
@@ -32,13 +32,15 @@ export class RegisterSubscriberAction extends SubscriberActionBase {
         console.log(`Running the [preValidateAction] for the ${this.actionName} action.`);
         this.validationContext
             .addRule(new rules.StringIsNotNullEmptyRange(
-                'NameIsValid',
-                'The name value is not valid. Must be between 1-40 characters.',
-                this.subscriber.Name, 2, 40, true))
+                'UserNameIsValid',
+                'The user name value is not valid. Must be between 1-80 characters.',
+                this.confirmationToken.UserName, 1, 80, true))
             .addRule(new rules.StringIsNotNullEmptyRange(
-                'EmailIsValid',
-                'The email address value is not valid. Must be between 8-60 characters.',
-                this.subscriber.EmailAddress, 8, 60, true));
+                'ConfirmationTokenIsValid',
+                'The confirmation token value is not valid.',
+                this.confirmationToken.ConfirmationToken, 40, 40, true));
+
+        console.log(`Running the [preValidateAction] for the ${this.actionName} action.`);
     }
 
     /**
@@ -47,6 +49,6 @@ export class RegisterSubscriberAction extends SubscriberActionBase {
      */
     performAction() {
         this.loggingService.log(this.actionName, Severity.Information, `Running the [performAction] for the ${this.actionName}.`)
-        this.response = this.businessProvider.subscriberApiService.registerSubscriber(this.subscriber);
+        this.response = this.businessProvider.subscriberApiService.confirmSubscriber(this.confirmationToken);
     }
 }

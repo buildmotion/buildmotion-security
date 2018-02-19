@@ -33,4 +33,4 @@ import { SubscriberApiService } from './business/subscriber-api.service';
     SubscriberBusinessProviderService
   ]
 })
-export class SecurityModule { }
+export class BuildMotionSecurityModule { }

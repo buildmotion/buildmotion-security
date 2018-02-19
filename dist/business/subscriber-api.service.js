@@ -18,10 +18,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/observeOn';
 import 'rxjs/add/operator/toPromise';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { LoggingService, Severity } from 'buildmotion-logging';
 import { HttpBaseService } from 'buildmotion-foundation';
-import { ServiceResponse } from 'buildmotion-foundation';
 var SubscriberApiService = (function (_super) {
     __extends(SubscriberApiService, _super);
     function SubscriberApiService(http, httpService, loggingService) {
@@ -35,25 +33,50 @@ var SubscriberApiService = (function (_super) {
         return _this;
     }
     /**
-     * @param {?} subscriber
+     * Use to register a new subscriber.
+     * @param {?} subscriber contains the subscriber's name and email address. Must be a valid email address.
      * @return {?}
      */
     SubscriberApiService.prototype.registerSubscriber = /**
-     * @param {?} subscriber
+     * Use to register a new subscriber.
+     * @param {?} subscriber contains the subscriber's name and email address. Must be a valid email address.
      * @return {?}
      */
     function (subscriber) {
         var /** @type {?} */ requestUrl = 'api/subscriber/register';
         this.loggingService.log(this.serviceName, Severity.Information, this.serviceName + " preparing to call: " + requestUrl);
-        /**
-         * TEMPORARY IMPLEMENTATION
-         */
-        var /** @type {?} */ response = new ServiceResponse();
-        response.IsSuccess = true;
-        response.Message = "Fake message from " + this.serviceName;
-        response.Data = true;
-        var /** @type {?} */ subject = new BehaviorSubject(response);
-        return subject.asObservable();
+        var /** @type {?} */ body = JSON.stringify(subscriber);
+        var /** @type {?} */ options = this.httpService.createRequestOptions(RequestMethod.Post, this.httpService.createHeader(false), requestUrl, body);
+        return this.httpService.executeRequest(options);
+        /**TEMPORARY IMPLEMENTATION */
+        // let response = new ServiceResponse();
+        // response.IsSuccess = true;
+        // response.Message = `Fake message from ${this.serviceName}`;
+        // response.Data = true;
+        // let subject: BehaviorSubject<any> = new BehaviorSubject(response);
+        // return subject.asObservable();
+        /**TEMPORARY IMPLEMENTATION */
+    };
+    /**
+     * Use to process the confirmation token from a new subscriber.
+     * @param {?} confirmationToken
+     * @return {?}
+     */
+    SubscriberApiService.prototype.confirmSubscriber = /**
+     * Use to process the confirmation token from a new subscriber.
+     * @param {?} confirmationToken
+     * @return {?}
+     */
+    function (confirmationToken) {
+        var /** @type {?} */ requestUrl = 'api/subscriber/confirmation';
+        this.loggingService.log(this.serviceName, Severity.Information, this.serviceName + " preparing to call: " + requestUrl);
+        var /** @type {?} */ body = JSON.stringify(confirmationToken);
+        var /** @type {?} */ options = this.httpService.createRequestOptions(RequestMethod.Post, this.httpService.createHeader(false), requestUrl, body);
+        return this.httpService.executeRequest(options);
+        /**TEMPORARY IMPLEMENTATION */
+        // let response = { IsSuccess: false, Message: `Fake message from ${this.serviceName}` };
+        // let subject: BehaviorSubject<any> = new BehaviorSubject(response);
+        // return subject.asObservable();
         /**TEMPORARY IMPLEMENTATION */
     };
     /**
@@ -106,8 +129,6 @@ function SubscriberApiService_tsickle_Closure_declarations() {
     SubscriberApiService.ctorParameters;
     /** @type {?} */
     SubscriberApiService.prototype.url;
-    /** @type {?} */
-    SubscriberApiService.prototype.data;
     /** @type {?} */
     SubscriberApiService.prototype.serviceName;
     /** @type {?} */

@@ -21,11 +21,11 @@ import { Subscriber } from './../models/subscriber.model';
 import { SubscriberItem } from './../models/subscriber-item.model';
 import { ServiceResponse } from 'buildmotion-foundation';
 import { ServiceContext } from 'angular-rules-engine';
+import { ConfirmationToken } from '..';
 
 @Injectable()
 export class SubscriberApiService extends HttpBaseService {
   url: string = '/api/security';
-  data: Observable<Response>;
   serviceName: string;
 
   constructor(
@@ -39,25 +39,52 @@ export class SubscriberApiService extends HttpBaseService {
     // this.serviceContext = serviceContext;
   }
 
+  /**
+   * Use to register a new subscriber. 
+   * @param subscriber contains the subscriber's name and email address. Must be a valid email address.
+   */
   public registerSubscriber(subscriber: Subscriber): Observable<ServiceResponse> {
-    const requestUrl = 'api/subscriber/register';
+    let requestUrl = 'api/subscriber/register';
     this.loggingService.log(this.serviceName, Severity.Information, `${this.serviceName} preparing to call: ${requestUrl}`);
 
-    // const body = JSON.stringify(subscriber);
-    // const options = this.httpService.createRequestOptions(
-    //   RequestMethod.Post,
-    //   this.httpService.createHeader(false),
-    //   requestUrl,
-    //   body);
-    // return this.httpService.executeRequest(options);
+    let body = JSON.stringify(subscriber);
+    let options = this.httpService.createRequestOptions(
+      RequestMethod.Post,
+      this.httpService.createHeader(false),
+      requestUrl,
+      body);
+    return this.httpService.executeRequest(options);
 
     /**TEMPORARY IMPLEMENTATION */
-    let response = new ServiceResponse();
-    response.IsSuccess = true;
-    response.Message = `Fake message from ${this.serviceName}`;
-    response.Data = true;
-    let subject: BehaviorSubject<any> = new BehaviorSubject(response);
-    return subject.asObservable();
+    // let response = new ServiceResponse();
+    // response.IsSuccess = true;
+    // response.Message = `Fake message from ${this.serviceName}`;
+    // response.Data = true;
+    // let subject: BehaviorSubject<any> = new BehaviorSubject(response);
+    // return subject.asObservable();
+    /**TEMPORARY IMPLEMENTATION */
+  }
+
+  /**
+   * Use to process the confirmation token from a new subscriber. 
+   * @param confirmationToken 
+   */
+  public confirmSubscriber(confirmationToken: ConfirmationToken) {
+    let requestUrl = 'api/subscriber/confirmation';
+    this.loggingService.log(this.serviceName, Severity.Information, `${this.serviceName} preparing to call: ${requestUrl}`);
+
+    let body = JSON.stringify(confirmationToken);
+    let options = this.httpService.createRequestOptions(
+      RequestMethod.Post,
+      this.httpService.createHeader(false),
+      requestUrl,
+      body);
+    return this.httpService.executeRequest(options);
+
+    /**TEMPORARY IMPLEMENTATION */
+    // let response = { IsSuccess: false, Message: `Fake message from ${this.serviceName}` };
+    // let subject: BehaviorSubject<any> = new BehaviorSubject(response);
+    // return subject.asObservable();
     /**TEMPORARY IMPLEMENTATION */
   }
 

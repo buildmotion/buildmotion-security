@@ -16,12 +16,12 @@ import 'rxjs/add/observable/throw';
 import * as rules from 'angular-rules-engine';
 import { Severity } from 'buildmotion-logging';
 import { SubscriberActionBase } from './subscriber-action-base.action';
-var RegisterSubscriberAction = (function (_super) {
-    __extends(RegisterSubscriberAction, _super);
-    function RegisterSubscriberAction(subscriber) {
+var ConfirmSubscriberAction = (function (_super) {
+    __extends(ConfirmSubscriberAction, _super);
+    function ConfirmSubscriberAction(confirmationToken) {
         var _this = _super.call(this) || this;
-        _this.subscriber = subscriber;
-        _this.actionName = 'CreateUserSubscriptionAction';
+        _this.confirmationToken = confirmationToken;
+        _this.actionName = 'ConfirmSubscriberAction';
         return _this;
     }
     /**
@@ -37,7 +37,7 @@ var RegisterSubscriberAction = (function (_super) {
      * of the [Action] framework.
      * @return {?}
      */
-    RegisterSubscriberAction.prototype.preValidateAction = /**
+    ConfirmSubscriberAction.prototype.preValidateAction = /**
      * Override this method from the base [Action] class to allow for rules to be added to the
      * action's [ValidationContext]. Any rules added to the [ValidationContext] here will be executed when
      * the action's [ValidateAction] method is called - this method is just one of many pipeline methods
@@ -47,8 +47,9 @@ var RegisterSubscriberAction = (function (_super) {
     function () {
         console.log("Running the [preValidateAction] for the " + this.actionName + " action.");
         this.validationContext
-            .addRule(new rules.StringIsNotNullEmptyRange('NameIsValid', 'The name value is not valid. Must be between 1-40 characters.', this.subscriber.Name, 2, 40, true))
-            .addRule(new rules.StringIsNotNullEmptyRange('EmailIsValid', 'The email address value is not valid. Must be between 8-60 characters.', this.subscriber.EmailAddress, 8, 60, true));
+            .addRule(new rules.StringIsNotNullEmptyRange('UserNameIsValid', 'The user name value is not valid. Must be between 1-80 characters.', this.confirmationToken.UserName, 1, 80, true))
+            .addRule(new rules.StringIsNotNullEmptyRange('ConfirmationTokenIsValid', 'The confirmation token value is not valid.', this.confirmationToken.ConfirmationToken, 40, 40, true));
+        console.log("Running the [preValidateAction] for the " + this.actionName + " action.");
     };
     /**
      * Use this method to provide business logic implementation - this method is allowed to execute only if the current action
@@ -59,22 +60,22 @@ var RegisterSubscriberAction = (function (_super) {
      * does not contain any rule violations.
      * @return {?}
      */
-    RegisterSubscriberAction.prototype.performAction = /**
+    ConfirmSubscriberAction.prototype.performAction = /**
      * Use this method to provide business logic implementation - this method is allowed to execute only if the current action
      * does not contain any rule violations.
      * @return {?}
      */
     function () {
         this.loggingService.log(this.actionName, Severity.Information, "Running the [performAction] for the " + this.actionName + ".");
-        this.response = this.businessProvider.subscriberApiService.registerSubscriber(this.subscriber);
+        this.response = this.businessProvider.subscriberApiService.confirmSubscriber(this.confirmationToken);
     };
-    return RegisterSubscriberAction;
+    return ConfirmSubscriberAction;
 }(SubscriberActionBase));
-export { RegisterSubscriberAction };
-function RegisterSubscriberAction_tsickle_Closure_declarations() {
+export { ConfirmSubscriberAction };
+function ConfirmSubscriberAction_tsickle_Closure_declarations() {
     /** @type {?} */
-    RegisterSubscriberAction.prototype.response;
+    ConfirmSubscriberAction.prototype.response;
     /** @type {?} */
-    RegisterSubscriberAction.prototype.subscriber;
+    ConfirmSubscriberAction.prototype.confirmationToken;
 }
-//# sourceMappingURL=register-subscriber.action.js.map
+//# sourceMappingURL=confirm-subscriber.action.js.map
