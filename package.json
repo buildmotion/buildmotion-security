@@ -1,12 +1,13 @@
 {
-  "name": "buildmotion-security",
+  "name": "@buildmotion/security",
   "version": "1.3.0",
   "description": "An Angular module to support OAuth authentication, login, subscriber, confirmations and resets.",
   "main": "index.js",
+  "module": "./buildmotion-security.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "transpile": "ngc",
-    "build": "npm run clean && npm run transpile && npm run move:assets",
+    "build": "npm run clean && npm run transpile && npm run move",
     "clean": "npm run clean:dist",
     "clean:dist": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./remove-dist-dir.ps1",
     "move": "npm run move:assets",

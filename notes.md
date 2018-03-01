@@ -2102,3 +2102,23 @@ from ngAppDos.AppComponent: Running constructor for the AppComponent. (Thu Nov 1
 simple-logger.service.js:39
 ```
 
+# Other Notes
+
+## Minify and Uglify with Rollup
+
+```json
+ "scripts": {
+    "transpile": "ngc",
+    "package": "rollup -c",
+    "minify": "uglifyjs dist/bundles/buildmotion-logging.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/buildmotion-logging.umd.min.js",
+    "build": "npm run transpile && npm run package && npm run minify"
+  },
+```
+
+## NPM Publish with @Scope
+
+More: [https://docs.npmjs.com/getting-started/scoped-packages](https://docs.npmjs.com/getting-started/scoped-packages)
+
+```
+npm publish --access=public
+```
