@@ -2,15 +2,18 @@
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BuildMotionLoggingModule } from 'buildmotion-logging';
-import { BuildMotionCoreModule } from 'buildmotion-core';
-import { BuildMotionFoundationModule } from 'buildmotion-foundation';
-import { SubscribeComponent } from './subscribe/subscribe.component';
-import { SubscriberBusinessProviderService } from './business/subscriber-business-provider.service';
-import { SubscriberApiService } from './business/subscriber-api.service';
-import { ConfirmSubscriptionComponent } from './confirm-subscription/confirm-subscription.component';
+import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+// import { HttpModule } from '@angular/http';
+// import { RouterModule } from '@angular/router';
+import { BuildMotionLoggingModule } from "@buildmotion/logging";
+import { BuildMotionCoreModule } from "@buildmotion/core";
+import { BuildMotionFoundationModule } from "@buildmotion/foundation";
+import { SubscribeComponent } from "./subscribe/subscribe.component";
+// INTERNAL INJECTABLE SERVICES
+import { SubscriberBusinessProviderService } from "./business/subscriber-business-provider.service";
+import { SubscriberApiService } from "./business/subscriber-api.service";
+import { ConfirmSubscriptionComponent } from "./confirm-subscription/confirm-subscription.component";
 var BuildMotionSecurityModule = (function () {
     function BuildMotionSecurityModule() {
     }

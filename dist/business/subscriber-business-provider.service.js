@@ -12,12 +12,12 @@ var __extends = (this && this.__extends) || (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-import { Injectable, Inject } from '@angular/core';
-import { LoggingService, Severity } from 'buildmotion-logging';
-import { ServiceBase } from 'buildmotion-foundation';
-import { ConfirmSubscriberAction } from './actions/confirm-subscriber.action';
-import { RegisterSubscriberAction } from './actions/register-subscriber.action';
-import { SubscriberApiService } from './subscriber-api.service';
+import { Injectable, Inject } from "@angular/core";
+import { LoggingService, Severity } from "@buildmotion/logging";
+import { ServiceBase } from "@buildmotion/foundation";
+import { ConfirmSubscriberAction } from "./actions/confirm-subscriber.action";
+import { RegisterSubscriberAction } from "./actions/register-subscriber.action";
+import { SubscriberApiService } from "./subscriber-api.service";
 var SubscriberBusinessProviderService = (function (_super) {
     __extends(SubscriberBusinessProviderService, _super);
     function SubscriberBusinessProviderService(loggingService, subscriberApiService) {

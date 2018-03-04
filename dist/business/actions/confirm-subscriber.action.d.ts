@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/throw';
-import { ServiceResponse } from 'buildmotion-foundation';
+import { ServiceResponse } from '@buildmotion/foundation';
 import { SubscriberActionBase } from './subscriber-action-base.action';
 import { ConfirmationToken } from '../..';
 export declare class ConfirmSubscriberAction extends SubscriberActionBase {

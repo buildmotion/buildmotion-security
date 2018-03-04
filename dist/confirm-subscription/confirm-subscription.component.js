@@ -12,12 +12,12 @@ var __extends = (this && this.__extends) || (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-import { Component, Output, EventEmitter } from '@angular/core';
-import { ComponentBase } from 'buildmotion-core';
-import { BuildMotionSecurityService, ConfirmationToken } from '..';
-import { LoggingService, Severity } from 'buildmotion-logging';
-import { FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, Output, EventEmitter } from "@angular/core";
+import { ComponentBase } from "@buildmotion/core";
+import { BuildMotionSecurityService, ConfirmationToken } from "..";
+import { LoggingService, Severity } from "@buildmotion/logging";
+import { FormBuilder, Validators } from "@angular/forms";
+import { ActivatedRoute, Router } from "@angular/router";
 var ConfirmSubscriptionComponent = (function (_super) {
     __extends(ConfirmSubscriptionComponent, _super);
     function ConfirmSubscriptionComponent(securityService, loggingService, formBuilder, route, router) {

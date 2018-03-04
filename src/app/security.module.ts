@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { HttpModule } from '@angular/http';
 // import { RouterModule } from '@angular/router';
 
-import { BuildMotionLoggingModule } from 'buildmotion-logging';
-import { BuildMotionCoreModule } from 'buildmotion-core';
-import { BuildMotionFoundationModule } from 'buildmotion-foundation';
+import { BuildMotionLoggingModule } from '@buildmotion/logging';
+import { BuildMotionCoreModule } from '@buildmotion/core';
+import { BuildMotionFoundationModule } from '@buildmotion/foundation';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 
 // INTERNAL INJECTABLE SERVICES

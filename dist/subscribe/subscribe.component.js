@@ -12,13 +12,13 @@ var __extends = (this && this.__extends) || (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-import { Component, Output, EventEmitter } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormBuilder, Validators } from '@angular/forms';
-import { ComponentBase } from 'buildmotion-core';
-import { LoggingService, Severity } from 'buildmotion-logging';
-import { Subscriber } from './../models/subscriber.model';
-import { BuildMotionSecurityService } from './../security.service';
+import { Component, Output, EventEmitter } from "@angular/core";
+import { Router } from "@angular/router";
+import { FormBuilder, Validators } from "@angular/forms";
+import { ComponentBase } from "@buildmotion/core";
+import { LoggingService, Severity } from "@buildmotion/logging";
+import { Subscriber } from "./../models/subscriber.model";
+import { BuildMotionSecurityService } from "./../security.service";
 var SubscribeComponent = (function (_super) {
     __extends(SubscribeComponent, _super);
     function SubscribeComponent(securityService, loggingService, formBuilder, router) {
@@ -56,6 +56,7 @@ var SubscribeComponent = (function (_super) {
      * @return {?}
      */
     function () {
+        this.securityService.serviceContext.Messages = [];
         this.subscriber = new Subscriber(this._form.value.subscriberName, this._form.value.emailAddress);
         this.subscribeUser(this.subscriber);
     };

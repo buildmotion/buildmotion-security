@@ -12,10 +12,10 @@ var __extends = (this && this.__extends) || (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-import 'rxjs/add/observable/throw';
-import * as rules from 'angular-rules-engine';
-import { Severity } from 'buildmotion-logging';
-import { SubscriberActionBase } from './subscriber-action-base.action';
+import "rxjs/add/observable/throw";
+import * as rules from "angular-rules-engine";
+import { Severity } from "@buildmotion/logging";
+import { SubscriberActionBase } from "./subscriber-action-base.action";
 var RegisterSubscriberAction = (function (_super) {
     __extends(RegisterSubscriberAction, _super);
     function RegisterSubscriberAction(subscriber) {

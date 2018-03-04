@@ -1,5 +1,5 @@
-import { LoggingService } from 'buildmotion-logging';
-import { ActionBase } from 'buildmotion-foundation';
+import { LoggingService } from '@buildmotion/logging';
+import { ActionBase } from '@buildmotion/foundation';
 import { SubscriberBusinessProviderService } from './../subscriber-business-provider.service';
 export declare class SubscriberActionBase extends ActionBase {
     businessProvider: SubscriberBusinessProviderService;
