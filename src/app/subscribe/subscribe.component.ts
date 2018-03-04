@@ -65,6 +65,7 @@ export class SubscribeComponent extends ComponentBase implements OnInit {
   }
 
   submitForm() {
+    this.securityService.serviceContext.Messages = [];
     this.subscriber = new Subscriber(this._form.value.subscriberName, this._form.value.emailAddress);
     this.subscribeUser(this.subscriber);
   }

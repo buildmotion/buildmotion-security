@@ -3,7 +3,7 @@
  * @suppress {checkTypes} checked by tsc
  */
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BuildMotionLoggingModule } from 'buildmotion-logging';
 import { BuildMotionCoreModule } from 'buildmotion-core';
 import { BuildMotionFoundationModule } from 'buildmotion-foundation';
@@ -21,6 +21,7 @@ var BuildMotionSecurityModule = (function () {
                         BuildMotionFoundationModule,
                         BuildMotionLoggingModule,
                         FormsModule,
+                        ReactiveFormsModule,
                     ],
                     declarations: [SubscribeComponent, ConfirmSubscriptionComponent],
                     exports: [
