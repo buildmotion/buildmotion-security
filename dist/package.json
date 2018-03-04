@@ -1,8 +1,10 @@
 {
   "name": "@buildmotion/security",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "An Angular module to support OAuth authentication, login, subscriber, confirmations and resets.",
   "main": "index.js",
+  "module": "buildmotion-security.js",
+  "typings": "buildmotion-security.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "transpile": "ngc",
