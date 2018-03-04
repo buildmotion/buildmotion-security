@@ -21,7 +21,7 @@ import { ConfirmSubscriptionComponent } from './confirm-subscription/confirm-sub
     BuildMotionLoggingModule,
     // CommonModule,
     FormsModule,
-    // ReactiveFormsModule,
+    ReactiveFormsModule,
     // HttpModule,
     // RouterModule
   ],
