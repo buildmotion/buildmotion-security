@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { HttpModule } from '@angular/http';
 // import { RouterModule } from '@angular/router';
 
@@ -20,7 +20,7 @@ import { ConfirmSubscriptionComponent } from './confirm-subscription/confirm-sub
     BuildMotionFoundationModule,
     BuildMotionLoggingModule,
     // CommonModule,
-    // FormsModule,
+    FormsModule,
     // ReactiveFormsModule,
     // HttpModule,
     // RouterModule
