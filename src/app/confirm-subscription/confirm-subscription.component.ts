@@ -1,10 +1,10 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ComponentBase } from 'buildmotion-core';
+import { ComponentBase } from '@buildmotion/core';
 import { BuildMotionSecurityService, ConfirmationToken } from '..';
-import { LoggingService, Severity } from 'buildmotion-logging';
+import { LoggingService, Severity } from '@buildmotion/logging';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { ServiceResponse, ErrorResponse } from 'buildmotion-foundation';
+import { ServiceResponse, ErrorResponse } from '@buildmotion/foundation';
 
 @Component({
   selector: 'bm-confirm-subscription',

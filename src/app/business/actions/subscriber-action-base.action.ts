@@ -1,8 +1,8 @@
 import { Action, ActionResult } from 'angular-actions';
 import { ServiceMessage, ServiceContext, MessageType } from 'angular-rules-engine';
 
-import { LoggingService, Severity } from 'buildmotion-logging';
-import { ActionBase } from 'buildmotion-foundation';
+import { LoggingService, Severity } from '@buildmotion/logging';
+import { ActionBase } from '@buildmotion/foundation';
 import { SubscriberBusinessProviderService } from './../subscriber-business-provider.service';
 
 export class SubscriberActionBase extends ActionBase {

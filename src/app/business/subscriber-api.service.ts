@@ -14,12 +14,12 @@ import 'rxjs/add/operator/toPromise';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
-import { LoggingService, Severity } from 'buildmotion-logging';
+import { LoggingService, Severity } from '@buildmotion/logging';
 
-import { HttpBaseService } from 'buildmotion-foundation';
+import { HttpBaseService } from '@buildmotion/foundation';
 import { Subscriber } from './../models/subscriber.model';
 import { SubscriberItem } from './../models/subscriber-item.model';
-import { ServiceResponse } from 'buildmotion-foundation';
+import { ServiceResponse } from '@buildmotion/foundation';
 import { ServiceContext } from 'angular-rules-engine';
 import { ConfirmationToken } from '..';
 

@@ -1,8 +1,8 @@
 import { Injectable, Inject } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
-import { LoggingService, Severity } from 'buildmotion-logging';
-import { ServiceBase, ServiceResponse } from 'buildmotion-foundation';
+import { LoggingService, Severity } from '@buildmotion/logging';
+import { ServiceBase, ServiceResponse } from '@buildmotion/foundation';
 
 import { Subscriber } from './../models/subscriber.model';
 import { ConfirmSubscriberAction } from './actions/confirm-subscriber.action';

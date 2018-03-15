@@ -1,10 +1,10 @@
 import { OnInit, EventEmitter } from '@angular/core';
-import { ComponentBase } from 'buildmotion-core';
+import { ComponentBase } from '@buildmotion/core';
 import { BuildMotionSecurityService } from '..';
-import { LoggingService } from 'buildmotion-logging';
+import { LoggingService } from '@buildmotion/logging';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ServiceResponse, ErrorResponse } from 'buildmotion-foundation';
+import { ServiceResponse, ErrorResponse } from '@buildmotion/foundation';
 export declare class ConfirmSubscriptionComponent extends ComponentBase implements OnInit {
     private securityService;
     formBuilder: FormBuilder;

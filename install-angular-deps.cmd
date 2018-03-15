@@ -1,0 +1,1 @@
+npm install @angular/common@5.1.3 @angular/compiler@5.1.3 @angular/compiler-cli@5.1.3 @angular/core@5.1.3 @angular/forms@5.1.3 @angular/http@5.1.3 @angular/platform-browser@5.1.3 @angular/platform-browser-dynamic@5.1.3 @angular/platform-server@5.1.3 @angular/router@5.1.3 @angular/animations@5.1.3 --save

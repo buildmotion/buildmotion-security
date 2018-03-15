@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { ServiceBase, ServiceResponse } from 'buildmotion-foundation';
-import { LoggingService, Severity } from 'buildmotion-logging';
+import { ServiceBase, ServiceResponse } from '@buildmotion/foundation';
+import { LoggingService, Severity } from '@buildmotion/logging';
 import { Subscriber } from './models/subscriber.model';
 
 import { SubscriberBusinessProviderService } from './business/subscriber-business-provider.service';

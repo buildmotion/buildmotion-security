@@ -6,11 +6,11 @@ import { Response } from '@angular/http';
 import { ActionResult } from 'angular-actions';
 import * as rules from 'angular-rules-engine';
 
-import { HttpBaseService } from 'buildmotion-foundation';
-import { Severity } from 'buildmotion-logging';
+import { HttpBaseService } from '@buildmotion/foundation';
+import { Severity } from '@buildmotion/logging';
 import { SubscriberActionBase } from './subscriber-action-base.action';
 
-import { Subscriber } from './../../../../models/subscriber.model';
+import { Subscriber } from './../../models/subscriber.model';
 
 
 export class RetrieveSubscribersAction extends SubscriberActionBase {

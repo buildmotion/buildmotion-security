@@ -12,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-import { ActionBase } from 'buildmotion-foundation';
+import { ActionBase } from "@buildmotion/foundation";
 var SubscriberActionBase = (function (_super) {
     __extends(SubscriberActionBase, _super);
     function SubscriberActionBase() {

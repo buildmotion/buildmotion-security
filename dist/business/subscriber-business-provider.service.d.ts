@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs/Observable';
-import { LoggingService } from 'buildmotion-logging';
-import { ServiceBase, ServiceResponse } from 'buildmotion-foundation';
+import { LoggingService } from '@buildmotion/logging';
+import { ServiceBase, ServiceResponse } from '@buildmotion/foundation';
 import { Subscriber } from './../models/subscriber.model';
 import { SubscriberApiService } from './subscriber-api.service';
 import { ConfirmationToken } from '..';

@@ -12,14 +12,14 @@ var __extends = (this && this.__extends) || (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-import { Inject, Injectable } from '@angular/core';
-import { Http, RequestMethod } from '@angular/http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/observeOn';
-import 'rxjs/add/operator/toPromise';
-import { LoggingService, Severity } from 'buildmotion-logging';
-import { HttpBaseService } from 'buildmotion-foundation';
+import { Inject, Injectable } from "@angular/core";
+import { Http, RequestMethod } from "@angular/http";
+import "rxjs/add/operator/map";
+import "rxjs/add/operator/catch";
+import "rxjs/add/operator/observeOn";
+import "rxjs/add/operator/toPromise";
+import { LoggingService, Severity } from "@buildmotion/logging";
+import { HttpBaseService } from "@buildmotion/foundation";
 var SubscriberApiService = (function (_super) {
     __extends(SubscriberApiService, _super);
     function SubscriberApiService(http, httpService, loggingService) {
