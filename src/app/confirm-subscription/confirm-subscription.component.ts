@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { ServiceResponse, ErrorResponse } from '@buildmotion/foundation';
 import { BuildMotionSecurityService } from './../security.service';
+import { ConfirmationToken } from './../models/confirmation-token.model';
 
 @Component({
   selector: 'bm-confirm-subscription',

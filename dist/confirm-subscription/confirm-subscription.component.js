@@ -14,10 +14,12 @@ var __extends = (this && this.__extends) || (function () {
  */
 import { Component, Output, EventEmitter } from "@angular/core";
 import { ComponentBase } from "@buildmotion/core";
-import { BuildMotionSecurityService, ConfirmationToken } from "..";
+// import { BuildMotionSecurityService, ConfirmationToken } from '..';
 import { LoggingService, Severity } from "@buildmotion/logging";
 import { FormBuilder, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
+import { BuildMotionSecurityService } from "./../security.service";
+import { ConfirmationToken } from "./../models/confirmation-token.model";
 var ConfirmSubscriptionComponent = (function (_super) {
     __extends(ConfirmSubscriptionComponent, _super);
     function ConfirmSubscriptionComponent(securityService, loggingService, formBuilder, route, router) {
