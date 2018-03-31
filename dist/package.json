@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@buildmotion/security",
-  "version": "1.6.13",
+  "version": "1.6.14",
   "description": "An Angular module to support OAuth authentication, login, subscriber, confirmations and resets.",
   "module": "esm5/buildmotion-security.js",
   "typings": "buildmotion-security.d.ts",
