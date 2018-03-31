@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@buildmotion/security",
-  "version": "1.6.13",
+  "version": "1.6.14",
   "description": "An Angular module to support OAuth authentication, login, subscriber, confirmations and resets.",
   "module": "buildmotion-security.js",
   "typings": "buildmotion-security.d.ts",
@@ -19,10 +19,10 @@
     "lib": {
       "entryFile": "public_api.ts",
       "umdModuleIds": {
-       "@buildmotion/foundation": "buildmotion-foundation",
-       "@buildmotion/logging": "buildmotion-logging",
-       "@buildmotion/core": "buildmotion-core",
-       "angular-rules-engine": "angular-rules-engine"
+        "@buildmotion/foundation": "buildmotion-foundation",
+        "@buildmotion/logging": "buildmotion-logging",
+        "@buildmotion/core": "buildmotion-core",
+        "angular-rules-engine": "angular-rules-engine"
       }
     }
   },
