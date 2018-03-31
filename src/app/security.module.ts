@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { HttpModule } from '@angular/http';
-// import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { BuildMotionLoggingModule } from '@buildmotion/logging';
 import { BuildMotionCoreModule } from '@buildmotion/core';
@@ -18,12 +18,12 @@ import { ConfirmSubscriptionComponent } from './confirm-subscription/confirm-sub
   imports: [
     BuildMotionCoreModule,
     BuildMotionFoundationModule,
-    BuildMotionLoggingModule
-    // CommonModule,
-    // FormsModule,
-    // ReactiveFormsModule,
-    // HttpModule,
-    // RouterModule
+    BuildMotionLoggingModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
+    RouterModule
   ],
   declarations: [SubscribeComponent, ConfirmSubscriptionComponent],
   exports: [
