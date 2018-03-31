@@ -1,4 +1,5 @@
 {
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@buildmotion/security",
   "version": "1.6.13",
   "description": "An Angular module to support OAuth authentication, login, subscriber, confirmations and resets.",
