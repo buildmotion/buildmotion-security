@@ -6,13 +6,13 @@ import {
   Headers,
   RequestOptions
 } from '@angular/http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/observeOn';
-import 'rxjs/add/operator/toPromise';
-// import 'rxjs/add/operator/cache';
-import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+  import 'rxjs/add/operator/map';
+  import 'rxjs/add/operator/catch';
+  import 'rxjs/add/operator/observeOn';
+  import 'rxjs/add/operator/toPromise';
+  // import 'rxjs/add/operator/cache';
+  import { Observable } from 'rxjs/Observable';
+  import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 import { LoggingService, Severity } from '@buildmotion/logging';
 

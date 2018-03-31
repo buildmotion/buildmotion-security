@@ -18,10 +18,17 @@ import { ConfirmSubscriptionComponent } from './confirm-subscription/confirm-sub
   imports: [
     BuildMotionCoreModule,
     BuildMotionFoundationModule,
+<<<<<<< HEAD
     BuildMotionLoggingModule
     // CommonModule,
     // FormsModule,
     // ReactiveFormsModule,
+=======
+    BuildMotionLoggingModule,
+    // CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+>>>>>>> 0c7f898cd1d771a80d8b6d539a437e7866da27c6
     // HttpModule,
     // RouterModule
   ],
