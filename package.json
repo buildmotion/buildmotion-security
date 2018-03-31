@@ -16,7 +16,13 @@
   },
   "ngPackage": {
     "lib": {
-      "entryFile": "public_api.ts"
+      "entryFile": "public_api.ts",
+      "externals": {
+       "@buildmotion/foundation": "buildmotion-foundation",
+       "@buildmotion/logging": "buildmotion-logging",
+       "@buildmotion/core": "buildmotion-core",
+       "angular-rules-engine": "angular-rules-engine"
+      }
     }
   },
   "repository": {
