@@ -1,5 +1,16 @@
 {
   "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts",
+      "umdModuleIds":{
+        "@buildmotion/foundation": "buildmotion-foundation",
+        "@buildmotion/logging": "buildmotion-logging",
+        "@buildmotion/core": "buildmotion-core",
+        "angular-rules-engine": "angular-rules-engine"
+      }
+    }
+  },
   "name": "@buildmotion/security",
   "version": "1.6.14",
   "description": "An Angular module to support OAuth authentication, login, subscriber, confirmations and resets.",
@@ -14,18 +25,7 @@
     "move": "npm run move:assets",
     "move:assets": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./move-assets.ps1",
     "package": "ng-packagr -p package.json"
-  },
-  "ngPackage": {
-    "lib": {
-      "entryFile": "public_api.ts",
-      "umdModuleIds": {
-        "@buildmotion/foundation": "buildmotion-foundation",
-        "@buildmotion/logging": "buildmotion-logging",
-        "@buildmotion/core": "buildmotion-core",
-        "angular-rules-engine": "angular-rules-engine"
-      }
-    }
-  },
+  },  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/buildmotion/buildmotion-security.git"
