@@ -1,6 +1,59 @@
 # Custom Angular Security Module :: A Guide on Creating, Publishing, and Using the buildmotion-security Module
 An Angular security module to implement OAuth authentication, subscriber, subscriber confirmation, account creation and confirmation, password reset, etc.
 
+## ng-packagr Setup
+
+```
+npm install -D ng-packagr
+```
+
+
+
+### public_api.ts
+As a new convention, the process requires a file that indicates the members of the module. Create a new `public_api.ts` file at the root of the module project. For example, the `BuildMotionLoggingModule` exported members are:
+
+```
+export { BuildMotionLoggingModule } from './src/app/buildmotion-logging.module';
+export { LoggingService } from './src/app/logging.service';
+export { Severity } from './src/app/severity.enum';
+```
+
+Now that we have the reference to the `ng-packagr` package and the `public_api.ts` file, we will need to update the project's `package.json` file to provide some configuration information for the new package. Add the schema information as well as the new `ngPackage` item used to provide `ng-packagr` configuration.
+
+Notice that the `public_api.ts` file is referenced as the `entryFile` value for `ng-packagr`. 
+
+```json
+"$schema": "./node_modules/ng-packagr/package.schema.json",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    }
+  },
+```
+
+### tsconfig.json
+The revised build process will need to know the entry point to the specified module. Update the `files` collection value to point to the new `public_api.ts` file created earlier.
+
+```json
+"files": [
+      "./public_api.ts"
+    ]
+```
+
+### Module Dependencies
+The `package.json` contains the `dependencies`, `devDependencies`, and the `peerDependencies`. The most important of these is the `peerDependencies`. Your package manager of choice will indicate the module's dependencies from this list when you install the package. 
+
+During the `ng-packagr` build process, it will show an error if the `dependencies` list is provided. You can move the packages referenced in the `dependencies` list to the `devDependencies` list because they are not used by the module. Modules cannot run like an application. They are consumed by other applications. Therefore, these package references are fine in the `devDependencies` section for development purposes.
+
+You can now safely remove the `dependencies` section from the `package.json` file.
+
+### Package Some Modules
+To use the new `ng-packagr`, add a new item to the `scripts` section of the `package.json` file. It should target the `package.json` file that contains the updated `ng-packagr` configuration. 
+
+```json
+"build:package": "ng-packagr -p package.json"
+```
+
 ## Setup
 The following section outlines the tools that will be used to develop our custom angular modules. It has been awhile since I've updated to newer version of Angular and Typescript - so I wanted to upgrade my personal development environment for this little project. This guide is using version 5 of Angular modules and version 2.4 of Typescript. It is not a requirement to use these versions for developing custom Angular modules. Your considerations are that the versions are compatible with each other and what versions you want to target for consumers of your module. 
 

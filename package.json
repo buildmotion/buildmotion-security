@@ -25,7 +25,7 @@
     "clean:dist": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./remove-dist-dir.ps1",
     "move": "npm run move:assets",
     "move:assets": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./move-assets.ps1",
-    "package": "ng-packagr -p package.json"
+    "build:package": "ng-packagr -p package.json"
   },
   "repository": {
     "type": "git",
